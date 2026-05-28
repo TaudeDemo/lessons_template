@@ -1,5 +1,6 @@
 import pygame
 
+from lessons import stars
 from lessons.lines import Lines
 from lessons.stars import Stars
 
@@ -12,10 +13,10 @@ def main():
     screen = pygame.display.set_mode(SIZE, pygame.SCALED, vsync=True)
     font = pygame.font.SysFont('Arial', 18, bold=False)
 
-    scena = Lines(screen)
+    scena = Stars(100)
 
     pygame.display.set_caption('Pygame - ' + scena.name)
-    screen.fill('white')
+    screen.fill('black')
     clock = pygame.time.Clock()
     running = True
     while running:
